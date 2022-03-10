@@ -1,0 +1,77 @@
+/*
+#################################################
+global settings
+#################################################
+*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #0065fc;
+  --blue-light: #deebff;
+  --grey: #f2f2f2;
+  --border-2-grey: 2px solid var(--grey);
+  --border-2-blue: 2px solid var(--blue);
+  --border-5-white: 5px solid #fff;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/*
+#################################################
+# header
+#################################################
+*/
+
+#header-navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 70px;
+}
+
+#header-navbar img{
+}
+
+#primary-navigation{
+  display: flex;
+  gap:15px;
+}
+
+.primary-navigation-item a{
+  display: inline-block;
+  padding: 50px 25px;
+}
+
+.primary-navigation-item{
+  text-transform: capitalize;
+}
+
+.primary-navigation-item a:hover{
+  border-top: var(--border-2-blue);
+  color: var(--blue);
+}
