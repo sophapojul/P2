@@ -209,26 +209,6 @@ h1 {
   white-space: nowrap;
 }
 
-#info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-#info .fa-stack {
-  width: 32px;
-}
-
-#info .fa-circle::before {
-  color: var(--grey);
-  font-size: 23px;
-}
-
-#info i:last-of-type::before {
-  color: var(--blue);
-  font-size: 12px;
-}
-
 /* 
 #################################################
 # Animation filtres
@@ -253,4 +233,35 @@ h1 {
   opacity: 1;
   right: 10px;
   color: var(--blue);
+}
+
+/* 
+#################################################
+# Info
+#################################################
+*/
+
+#info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fa-stack.small{
+  font-size: 0.71em;
+}
+
+/* #info .fa-stack {
+  width: 32px;
+} */
+
+#info .fa-circle::before {
+  color: var(--grey);
+  /* font-size: 23px;
+  vertical-align: middle; */
+}
+
+#info i:last-of-type::before {
+  color: var(--blue);
+  /* font-size: 12px; */
 }
