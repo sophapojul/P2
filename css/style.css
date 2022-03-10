@@ -29,7 +29,9 @@ body {
   font-size: 16px;
   min-height: 100vh;
   max-width: 1440px;
+  padding: 50px 50px;
   margin: 0 auto;
+  border: 1px solid #000;
 }
 
 li {
@@ -49,9 +51,17 @@ a {
 
 #header-navbar {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   min-height: 70px;
+}
+
+#header-navbar > a > * {
+  vertical-align: middle;
+}
+
+#header-navbar img {
+  padding: 0 20px;
 }
 
 #primary-navigation {
