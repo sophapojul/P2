@@ -33,12 +33,81 @@
           <img src="./assets/logo/Booki.png" alt="logo du site Booki" />
         </a>
         <ul id="primary-navigation">
-          <li class="primary-navigation-item"><a href="#hosting">hébergements</a></li>
-          <li class="primary-navigation-item"><a href="#activity">activités</a></li>
+          <li class="primary-navigation-item">
+            <a href="#hosting">hébergements</a>
+          </li>
+          <li class="primary-navigation-item">
+            <a href="#activity">activités</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
+      <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+      <div>En plein centre ville ou en pleine nature</div>
+      <section id="search">
+        <form id="form" role="search">
+          <button id="btn-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </button>
+          <input
+            type="search"
+            id="query"
+            placeholder="Rechercher..."
+            aria-label="Rechercher sur le web"
+            value="Marseille, France"
+          />
+          <button type="submit">Rechercher</button>
+        </form>
+        <div id="filtres">
+          <div>Filtres</div>
+          <ul>
+            <li>
+              <button>
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-money-bill-wave fa-stack-1x"></i>
+                </span>
+                <div>Économique</div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-child fa-stack-1x"></i>
+                </span>
+                <div>Familial</div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-heart fa-stack-1x"></i>
+                </span>
+                <div>Romantique</div>
+              </button>
+            </li>
+            <li>
+              <button>
+                <span class="fa-stack">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-dog fa-stack-1x"></i>
+                </span>
+                <div>Animaux Autorisés</div>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div id="info">
+          <span class="fa-stack">
+            <i class="far fa-circle fa-stack-2x"></i>
+            <i class="fas fa-info fa-stack-1x"></i>
+          </span>
+          <div>Plus de 500 logements sont disponibles dans cette ville</div>
+        </div>
+      </section>
     </main>
   </body>
 </html>

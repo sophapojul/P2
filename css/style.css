@@ -29,9 +29,8 @@ body {
   font-size: 16px;
   min-height: 100vh;
   max-width: 1440px;
-  padding: 50px 50px;
+  padding: 0 50px;
   margin: 0 auto;
-  border: 1px solid #000;
 }
 
 li {
@@ -53,15 +52,12 @@ a {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  min-height: 70px;
-}
-
-#header-navbar > a > * {
-  vertical-align: middle;
+  flex-wrap: wrap;
 }
 
 #header-navbar img {
   padding: 0 20px;
+  vertical-align: middle;
 }
 
 #primary-navigation {
@@ -75,10 +71,186 @@ a {
 
 .primary-navigation-item a {
   display: inline-block;
-  padding: 50px 25px;
+  padding: 50px 25px 30px;
 }
 
 .primary-navigation-item a:hover {
   border-top: var(--border-2-blue);
+  color: var(--blue);
+}
+
+/*
+#################################################
+# Search form
+#################################################
+*/
+
+main > div {
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+#search {
+  margin: 20px 0;
+}
+
+#form {
+  display: flex; /* to compensate for missing borders of the input */
+}
+
+#btn-icon {
+  border: var(--border-2-grey);
+  border-right: none;
+  border-radius: 15px 0 0 15px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.fa-map-marker-alt {
+  font-size: 18px;
+}
+
+#form input,
+#form button[type="submit"] {
+  line-height: 46px; /*height50px - border2px */
+}
+
+#form input {
+  width: 234px;
+  border-inline-width: 0;
+  border-block: var(--border-2-grey);
+  padding-left: 18px;
+  font-weight: bold;
+}
+
+#form button[type="submit"] {
+  width: 134px;
+  background-color: var(--blue);
+  color: #fff;
+  border: var(--border-2-blue);
+  border-radius: 0 15px 15px 0;
+}
+
+/* 
+#################################################
+# Filtres
+#################################################
+*/
+
+#filtres {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 35px 0;
+}
+
+#filtres ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 content;
+  gap: 15px;
+}
+
+#filtres button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-right: 20px;
+  border-radius: 24px;
+  border: var(--border-2-grey);
+  background-color: #fff;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+#filtes > span {
+  display: inline-block;
+}
+
+#filtres .fas:nth-child(odd):before {
+  color: var(--blue-light);
+}
+
+#filtres .fas::before {
+  color: var(--blue);
+}
+
+#filtres .fa-stack {
+  font-size: 24px;
+  margin-left: -7px;
+  margin-top: -3px;
+}
+
+#filtres .fa-stack-1x::before {
+  font-size: 19px; /* icon height */
+}
+
+#filtres .fa-circle {
+  font-size: 51px;
+}
+
+#filtres .fas:nth-child(odd):before {
+  color: var(--blue-light);
+}
+
+#filtres .fas::before {
+  color: var(--blue);
+}
+
+#filtres div {
+  white-space: nowrap;
+}
+
+#info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#info .fa-stack {
+  width: 32px;
+}
+
+#info .fa-circle::before {
+  color: var(--grey);
+  font-size: 23px;
+}
+
+#info i:last-of-type::before {
+  color: var(--blue);
+  font-size: 12px;
+}
+
+/* 
+#################################################
+# Animation filtres
+#################################################
+*/
+
+#filtres button:after {
+  content: ">>";
+  position: absolute;
+  opacity: 0;
+  top: 13px;
+  right: -20px;
+  transition: all 0.5s;
+}
+
+#filtres button:hover {
+  padding-right: 35px;
+  border: 2px solid var(--blue);
+}
+
+#filtres button:hover::after {
+  opacity: 1;
+  right: 10px;
   color: var(--blue);
 }
