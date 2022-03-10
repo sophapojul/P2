@@ -47,31 +47,28 @@ a {
 #################################################
 */
 
-#header-navbar{
+#header-navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 70px;
 }
 
-#header-navbar img{
-}
-
-#primary-navigation{
+#primary-navigation {
   display: flex;
-  gap:15px;
+  gap: 15px;
 }
 
-.primary-navigation-item a{
+.primary-navigation-item {
+  text-transform: capitalize;
+}
+
+.primary-navigation-item a {
   display: inline-block;
   padding: 50px 25px;
 }
 
-.primary-navigation-item{
-  text-transform: capitalize;
-}
-
-.primary-navigation-item a:hover{
+.primary-navigation-item a:hover {
   border-top: var(--border-2-blue);
   color: var(--blue);
 }
