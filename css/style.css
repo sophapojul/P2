@@ -247,7 +247,7 @@ h1 {
   gap: 12px;
 }
 
-.fa-stack.small{
+.fa-stack.small {
   font-size: 0.71em;
 }
 
@@ -265,3 +265,74 @@ h1 {
   color: var(--blue);
   /* font-size: 12px; */
 }
+
+/* 
+#################################################
+# Local Hosting
+#################################################
+*/
+
+#hosting {
+  display: flex;
+  justify-content: space-between;
+  gap: 41px;
+  border: 1px solid #000;
+}
+
+#local-hosting {
+  flex: 2;
+  gap: 30px;
+  background-color: var(--grey);
+}
+
+#local-hosting a {
+  display: flex;
+  flex-direction: column;
+}
+
+#local-hosting img {
+  order: -1;
+  width: 241px;
+  height: 119px;
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+}
+
+#local-hosting > section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-inline: 40px;
+}
+
+/* 
+#################################################
+# popular
+#################################################
+*/
+
+#popular {
+  flex: 1;
+  background-color: var(--grey);
+}
+
+#popular-title > span {
+  display: inline-block;
+}
+
+#popular-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+#popular img {
+  width: 132px;
+  height: 139px;
+  object-fit: cover;
+}
+
+/* 
+#################################################
+# Activity
+#################################################
+*/
