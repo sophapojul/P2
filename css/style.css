@@ -29,7 +29,7 @@ body {
   font-size: 16px;
   min-height: 100vh;
   max-width: 1440px;
-  padding: 0 50px;
+  /* padding: 0 20px; */
   margin: 0 auto;
 }
 
@@ -276,33 +276,68 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 41px;
-  border: 1px solid #000;
+  height: 625px;
 }
 
 #local-hosting {
   flex: 2;
-  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   background-color: var(--grey);
+  padding: 40px;
+}
+
+#local-hosting article {
+  flex: 1 1 0;
+  /* background-color: #fff; */
 }
 
 #local-hosting a {
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  width: 246px;
+  background-color: #fff;
+  border-radius: 18px;
+  padding-bottom: 8px;
 }
 
 #local-hosting img {
+  flex: 1 1 0;
   order: -1;
-  width: 241px;
   height: 119px;
   object-fit: cover;
+  border: var(--border-5-white);
   border-radius: 14px 14px 0 0;
 }
 
 #local-hosting > section {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-inline: 40px;
+  gap: 35px;
+}
+
+.data,
+h3 {
+  width: 90%;
+  align-self: center;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.data > div > span {
+  font-weight: bold;
+}
+
+#local-hosting > div {
+  font-weight: bold;
 }
 
 /* 
@@ -313,7 +348,11 @@ h1 {
 
 #popular {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   background-color: var(--grey);
+  padding: 35px;
 }
 
 #popular-title > span {
@@ -325,10 +364,44 @@ h1 {
   justify-content: space-between;
 }
 
+#popular section {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#popular article {
+  flex: 1 1 0;
+  display: flex;
+}
+
 #popular img {
   width: 132px;
   height: 139px;
   object-fit: cover;
+}
+
+#popular a {
+  flex: 1 1 0;
+  display: flex;
+  background-color: #fff;
+  border-radius: 14px;
+}
+
+#popular img {
+  /* display: block; */
+  order: -1;
+  /* height: 139px; */
+  height: auto;
+  object-fit: cover;
+  border-radius: 14px 0 0 14px;
+}
+
+#popular img,
+#popular h3,
+#popular .data {
+  flex: 1 1 0;
 }
 
 /* 
