@@ -19,7 +19,9 @@ global settings
   --blue: #0065fc;
   --blue-light: #deebff;
   --grey: #f2f2f2;
+  --border-1-grey: 1px solid var(--grey);
   --border-2-grey: 2px solid var(--grey);
+  --border-1-blue: 1px solid var(--blue);
   --border-2-blue: 2px solid var(--blue);
   --border-5-white: 5px solid #fff;
 }
@@ -42,22 +44,37 @@ a {
   color: #000;
 }
 
+h1,h2{
+  font-size: 21px;
+  font-weight: bold;
+}
+
+h3{
+  font-size: 15px;
+  font-weight: bold;
+}
+
 /*
 #################################################
 # header
 #################################################
 */
 
+header, main {
+  padding: 0 50px;
+}
+
 #header-navbar {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 }
 
 #header-navbar img {
   padding: 0 20px;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 #primary-navigation {
@@ -71,7 +88,7 @@ a {
 
 .primary-navigation-item a {
   display: inline-block;
-  padding: 50px 25px 30px;
+  padding: 50px 25px 0;
 }
 
 .primary-navigation-item a:hover {
@@ -90,7 +107,6 @@ main > div {
 }
 
 h1 {
-  font-size: 21px;
   margin-bottom: 10px;
 }
 
@@ -99,11 +115,12 @@ h1 {
 }
 
 #form {
-  display: flex; /* to compensate for missing borders of the input */
+  position: relative;
+  /* display: flex; to compensate for missing borders of the input */
 }
 
 #btn-icon {
-  border: var(--border-2-grey);
+  border: var(--border-1-grey);
   border-right: none;
   border-radius: 15px 0 0 15px;
   width: 50px;
@@ -121,19 +138,39 @@ h1 {
 }
 
 #form input {
-  width: 234px;
-  border-inline-width: 0;
-  border-block: var(--border-2-grey);
-  padding-left: 18px;
+  position: absolute;
+  z-index: -1;
+  left: 35px;
+  width: 333px;
+  border-radius: 15px;
+  border: var(--border-1-grey);
+  padding-left: 30px;
   font-weight: bold;
 }
 
-#form button[type="submit"] {
+.desktop-search {
+  position: absolute;
+  left: 318px;
   width: 134px;
   background-color: var(--blue);
   color: #fff;
-  border: var(--border-2-blue);
+  border: var(--border-1-blue);
   border-radius: 0 15px 15px 0;
+}
+
+.mobile-search {
+  position: absolute;
+  left: 318px;
+  width: 50px;
+  background-color: var(--blue);
+  color: #fff;
+  border: var(--border-1-blue);
+  border-radius: 15px;
+  display: none;
+}
+
+.fa-search {
+  font-size: 17px;
 }
 
 /* 
@@ -280,12 +317,12 @@ h1 {
 }
 
 #local-hosting {
-  flex: 2;
+  flex: 2 0 0;
   display: flex;
   flex-direction: column;
   gap: 25px;
   background-color: var(--grey);
-  padding: 40px;
+  padding: 45px;
 }
 
 #local-hosting article {
@@ -317,7 +354,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 30px;
 }
 
 .data,
@@ -347,7 +384,7 @@ h3 {
 */
 
 #popular {
-  flex: 1;
+  flex: 1 0 0;
   display: flex;
   flex-direction: column;
   gap: 30px;
