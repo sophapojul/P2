@@ -345,7 +345,7 @@ h1 {
   gap: 7px;
 }
 
-.local-articles article{
+.local-articles article {
   background-color: #fff;
   border: 5px solid #fff;
   border-radius: 15px;
@@ -371,18 +371,19 @@ h3 {
   flex-direction: column;
   gap: 5px;
   padding-bottom: 2px;
-  font-size:initial;
+  font-size: initial;
 }
 
-.data i, .data span {
+.data i,
+.data span {
   font-weight: bold;
 }
 
-#local-hosting > div + div{
+#local-hosting > div + div {
   font-weight: bold;
   padding: 5px 0;
   margin-top: 20px;
-} 
+}
 
 .fa-star {
   color: var(--blue);
@@ -458,7 +459,7 @@ h3 {
 # Activity
 #################################################
 */
-.activity-articles{
+.activity-articles {
   display: flex;
   /* flex-wrap: wrap; */
   gap: 40px;
@@ -466,13 +467,13 @@ h3 {
   height: 444.51px;
 }
 
-.activity-articles>div {
+.activity-articles > div {
   display: flex;
   flex-direction: column;
   /* width: 25%; */
 }
 
-.activity-articles img{
+.activity-articles img {
   width: 100%;
   object-position: venter;
   object-fit: cover;
