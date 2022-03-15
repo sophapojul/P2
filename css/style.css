@@ -389,6 +389,10 @@ h3 {
   color: var(--blue);
 }
 
+.not-active {
+  color: var(--grey);
+}
+
 /* 
 #################################################
 # popular
