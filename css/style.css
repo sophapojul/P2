@@ -4,7 +4,12 @@ global settings
 #################################################
 */
 
-* {
+*,
+html,
+body,
+h1,
+h2,
+h4 {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -246,7 +251,8 @@ h1 {
 }
 
 #filtres div {
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  width: max-content;
 }
 
 /* 
@@ -313,9 +319,10 @@ h1 {
 */
 
 #hosting {
+  height: 625px;
   display: flex;
   gap: 40px;
-  height: 625px;
+  height: 100%;
 }
 
 #hosting h2 {
@@ -329,17 +336,20 @@ h1 {
   gap: 15px;
   background-color: var(--grey);
   padding: 40px;
+  border-radius: 20px;
+  overflow: auto;
+  /* background-color: #000; */
 }
 
 .local-articles {
-  flex: 0 0 2;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .local-articles a {
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -349,6 +359,7 @@ h1 {
   background-color: #fff;
   border: 5px solid #fff;
   border-radius: 15px;
+  box-shadow: 0px 0px 20px var(--grey);
 }
 
 .local-articles img {
@@ -400,62 +411,63 @@ h3 {
 */
 
 #popular {
-  flex: 1;
+  flex-basis: 420px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
   background-color: var(--grey);
   padding: 35px;
-}
-
-#popular-title > span {
-  display: inline-block;
+  border-radius: 20px;
+  /* background-color: #000; */
 }
 
 #popular-title {
+  width: 343px;
   display: flex;
   justify-content: space-between;
 }
 
+#popular-title i::before {
+  font-size: 20px;
+}
+
 .popular-articles {
-  flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  gap: 25px;
-}
-
-#popular article {
-  flex: 1 1 0;
-  display: flex;
-  height: 199px;
-}
-
-#popular img {
-  max-width: 132px;
-  max-height: 139px;
-  object-fit: cover;
+  gap: 43px;
 }
 
 #popular a {
-  flex: 1 1 0;
   display: flex;
+  height: 144px;
+  width: 343px;
   background-color: #fff;
-  border-radius: 14px;
+  border-radius: 15px;
+  border: var(--border-5-white);
+  box-shadow: 0px 0px 20px var(--grey);
 }
 
 #popular img {
-  /* display: block; */
   order: -1;
-  /* height: 139px; */
-  height: auto;
+  flex-shrink: 0;
+  height: 134px;
+  width: 130px;
   object-fit: cover;
-  border-radius: 14px 0 0 14px;
+  border-radius: 15px 0 0 15px;
 }
 
-#popular img,
-#popular h3,
 #popular .data {
-  flex: 1 1 0;
+  height: 100%;
+  padding: 15px;
+}
+
+#popular .star {
+  margin-top: auto;
+}
+
+#popular h3 {
+  margin-left: -18px;
 }
 
 /* 
@@ -463,22 +475,126 @@ h3 {
 # Activity
 #################################################
 */
+
+#activity {
+  margin: 20px 0;
+  padding-top: 20px;
+  border-radius: 20px;
+  /* background: #000;
+  color: #fff; */
+}
+
+#activity h2 {
+  margin: 20px 0;
+}
+
 .activity-articles {
   display: flex;
-  /* flex-wrap: wrap; */
-  gap: 40px;
-  width: 100%;
-  height: 444.51px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 43px;
 }
 
 .activity-articles > div {
   display: flex;
   flex-direction: column;
-  /* width: 25%; */
+  flex-basis: 302px;
+  gap: 43px;
+  height: 444.5px;
+}
+
+.activity-articles div:nth-child(even) article {
+  height: 45%;
+  position: relative;
+}
+
+.activity-articles div:nth-child(odd) article {
+  height: 100%;
+  position: relative;
+}
+
+.activity-articles article {
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px var(--grey);
+}
+
+.activity-articles a > div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 19px;
+  font-weight: 700;
+  /* line-height: 56px; */
+  background-color: #fff;
+  border-radius: 0 0 14px 14px;
 }
 
 .activity-articles img {
+  height: 100%;
   width: 100%;
-  object-position: venter;
+  object-position: center;
   object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Footer */
+
+footer {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  background-color: var(--grey);
+}
+
+footer > * {
+  flex: 1 0 0;
+}
+
+footer li {
+  padding-top: 15px;
+  width: max-content;
+}
+
+/* End Footer */
+
+@media only screen and (max-width: 992px) {
+  #hosting {
+    flex-direction: column;
+  }
+
+  #local-hosting {
+    order: 1;
+    /* align-items: center; */
+    /* max-height: fit-content; */
+  }
+
+  #popular {
+    order: -1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #header-navbar {
+    flex-direction: column;
+  }
+
+  .desktop-search {
+    display: none;
+  }
+  .mobile-search {
+    display: inline-block;
+  }
+  #popular .data > * {
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+  .activity-articles > div {
+    height: 190px;
+  }
+  .activity-articles > div > * {
+    height: 100%;
+  }
 }
