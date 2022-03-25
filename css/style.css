@@ -148,17 +148,17 @@ h1 {
 #form input {
   position: absolute;
   z-index: -1;
-  left: 35px;
+  left: 0;
   width: 333px;
   border-radius: 15px;
   border: var(--border-1-grey);
-  padding-left: 30px;
+  padding-left: 70px;
   font-weight: bold;
 }
 
 .desktop-search {
   position: absolute;
-  left: 318px;
+  left: 283px;
   width: 134px;
   background-color: var(--blue);
   color: #fff;
@@ -168,7 +168,7 @@ h1 {
 
 .mobile-search {
   position: absolute;
-  left: 318px;
+  left: 283px;
   width: 50px;
   background-color: var(--blue);
   color: #fff;
