@@ -100,7 +100,6 @@ main {
 }
 
 .nav-item a {
-  /* display: inline-block; */
   padding: 50px 25px 0;
 }
 
@@ -129,11 +128,9 @@ h1 {
 
 #btn-icon {
   border: var(--border-2-grey);
-  /* border-right: none; */
   border-radius: 15px 0 0 15px;
   width: 50px;
   height: 50px;
-  /* cursor: pointer; */
 }
 
 .fa-map-marker-alt {
@@ -416,7 +413,6 @@ h1 {
   background-color: var(--grey);
   padding: 35px;
   border-radius: 20px;
-  /* background-color: #000; */
 }
 
 #popular-title {
@@ -455,7 +451,8 @@ h1 {
 }
 
 #popular .card-body {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 15px;
 }
 
