@@ -14,8 +14,8 @@ p {
   padding: 0;
   margin: 0;
 }
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 :root {
@@ -72,6 +72,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 5px;
 }
 #header-nav img {
   width: 100px;
@@ -91,7 +92,6 @@ img {
   border-top: var(--border-2-blue);
   color: var(--blue);
 }
-/* End Header */
 /* 
 #################################################
 # Main
@@ -159,10 +159,9 @@ img {
 .fa-search {
   font-size: 17px;
 }
-/* End Search Form */
 /* 
 #################################################
-# Filtres
+# filtres
 #################################################
 */
 #filtres {
@@ -214,10 +213,9 @@ img {
 .filtre-text {
   width: max-content;
 }
-/* End Filtres */
 /* 
 #################################################
-# Animation Filtres
+# Animation filtres
 #################################################
 */
 #filtres .filtre-item::after {
@@ -237,7 +235,6 @@ img {
   right: 10px;
   color: var(--blue);
 }
-/* End Animation Filtres */
 /* 
 #################################################
 # Info
@@ -257,7 +254,6 @@ img {
 #info .fa-info::before {
   color: var(--blue);
 }
-/* End Info*/
 /* 
 #################################################
 # Hosting
@@ -281,7 +277,6 @@ img {
 .not-active {
   color: var(--grey);
 }
-/* End Hosting */
 /* 
 #################################################
 #Location
@@ -343,7 +338,6 @@ img {
   text-decoration: underline;
   color: var(--blue);
 }
-/* End Location  */
 /* 
 #################################################
 # Popular
@@ -374,6 +368,9 @@ img {
   flex-direction: column;
   gap: 35px;
 }
+.popular-item {
+  width: 100%;
+}
 .popular-item a {
   display: flex;
   background-color: #fff;
@@ -383,8 +380,8 @@ img {
 }
 .popular-item img {
   order: -1;
-  width: 38%;
-  aspect-ratio: 130 / 137;
+  width: 40%;
+  aspect-ratio: 132 / 139;
   border-radius: 15px 0 0 15px;
   border: var(--border-5-white);
 }
@@ -397,7 +394,6 @@ img {
 #popular .stars {
   margin-top: auto;
 }
-/* End Popular  */
 /* 
 #################################################
 # Activity
@@ -520,10 +516,6 @@ img {
   #location h2 {
     margin-right: auto;
   }
-  .popular-item {
-    max-width: 335px;
-    margin: auto;
-  }
   /* 
   ###############################################
   # Activity < 992
@@ -576,7 +568,6 @@ img {
   }
 
   #header-nav img {
-    width: 110px;
     padding: 30px;
   }
   .nav-item a {
@@ -644,20 +635,19 @@ img {
     padding: 35px 22px;
   }
   .popular-list {
+    flex-basis: auto;
     gap: 12px;
     padding: 0;
     font-size: 13px;
   }
   .popular-item {
+    /* width: 100%; */
     margin: auto;
   }
-  .popular-item a {
-    width: 334px;
+  .popular-body,
+  .popular-body h3 {
+    font-size: clamp(0.8rem, 0.1824rem + 2.7451vw, 1.5rem);
   }
-  .popular-item img {
-    aspect-ratio: 1 / 1;
-  }
-
   /* 
   ###############################################
   # Location < 768
@@ -669,21 +659,27 @@ img {
     gap: 5vw;
   }
   .location-list {
+    flex-basis: auto;
     flex-direction: column;
     align-items: center;
     gap: 12px;
   }
-  .location-item a {
-    width: 340px;
+  .location-item {
+    width: 100%;
   }
   .location-item img {
-    height: 100%;
+    /* width: 100%; */
+    max-height: 100%;
     aspect-ratio: 330 / 120;
   }
+  .location-body,
+  .location-item h3 {
+    font-size: clamp(0.8rem, 0.1824rem + 2.7451vw, 1.5rem);
+  }
   /* 
-  ###############################################
+  ############################################
    # Activity < 768
-  ###############################################
+  ############################################
   */
   #activity {
     padding: 0 22px;
@@ -694,7 +690,6 @@ img {
   .small-card-list {
     gap: 22px;
   }
-  .activity-list,
   .activity-item {
     flex-direction: column;
     align-items: center;
@@ -703,7 +698,7 @@ img {
     flex-basis: 190px;
   }
   .big-card {
-    width: 335px;
+    width: 100%;
     margin: auto;
   }
   .small-card-list {
@@ -711,11 +706,11 @@ img {
     height: auto;
     margin: auto;
   }
-  .small-card-list article {
-    width: 335px;
-  }
   .activity-item img {
     aspect-ratio: 334 / 190;
+  }
+  .activity-item h3 {
+    font-size: clamp(0.8rem, 0.4471rem + 1.5686vw, 1.2rem);
   }
   /* 
   ###############################################
@@ -732,66 +727,34 @@ img {
   #footer li {
     margin-left: 0;
   }
-  .parent {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .child a {
-    display: flex;
-    border: 1px solid #000;
-    width: 80%;
-  }
-  .img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-/* 
+  /* 
 #################################################
 # Media Queries < 368px
 ################################################# 
 */
-@media screen and (max-width: 368px) {
-  /* 
-  ###############################################
-  # Header
-  ###############################################
-  */
-  .nav-item a {
-    padding: 12px 10%;
-  }
-  /* 
-  ###############################################
-  # Search Form < 368
-  ###############################################
+  @media screen and (max-width: 368px) {
+    /* 
+    #############################################
+    # Header
+    #############################################
     */
-  #search {
-    padding: 20px 4%;
-  }
-  #form input {
-    width: 260px;
-    padding-left: 60px;
-  }
-  .mobile-search {
-    left: 210px;
-  }
-  /* 
-  ###############################################
-  # Hosting & Activity < 368
-  ###############################################
-  */
-  #popular,
-  #location,
-  #activity {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .popular-item a,
-  .location-item a,
-  .big-card,
-  .small-card-list article {
-    width: 100%;
+    .nav-item a {
+      padding: 12px 10%;
+    }
+    /* 
+    #############################################
+    # Search Form < 368
+    #############################################
+    */
+    #search {
+      padding: 20px 4%;
+    }
+    #form input {
+      width: 260px;
+      padding-left: 60px;
+    }
+    .mobile-search {
+      left: 210px;
+    }
   }
 }
