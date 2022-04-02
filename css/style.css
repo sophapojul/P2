@@ -374,6 +374,9 @@ img {
   flex-direction: column;
   gap: 35px;
 }
+.popular-item {
+  width: 100%;
+}
 .popular-item a {
   display: flex;
   background-color: #fff;
@@ -520,10 +523,6 @@ img {
   #location h2 {
     margin-right: auto;
   }
-  .popular-item {
-    max-width: 335px;
-    margin: auto;
-  }
   /* 
   ###############################################
   # Activity < 992
@@ -644,6 +643,7 @@ img {
     padding: 35px 22px;
   }
   .popular-list {
+    flex-basis: auto;
     gap: 12px;
     padding: 0;
     font-size: 13px;
@@ -651,8 +651,9 @@ img {
   .popular-item {
     margin: auto;
   }
-  .popular-item a {
-    width: 334px;
+  .popular-body,
+  .popular-body h3 {
+    font-size: clamp(0.8rem, 0.4471rem + 1.5686vw, 1.2rem);
   }
   .popular-item img {
     aspect-ratio: 1 / 1;
@@ -669,15 +670,20 @@ img {
     gap: 5vw;
   }
   .location-list {
+    flex-basis: auto;
     flex-direction: column;
     align-items: center;
     gap: 12px;
   }
   .location-item a {
-    width: 340px;
+    width: 100%;
+  }
+  .location-body,
+  .location-body h3 {
+    font-size: clamp(0.8rem, 0.4471rem + 1.5686vw, 1.2rem);
   }
   .location-item img {
-    height: 100%;
+    max-height: 100%;
     aspect-ratio: 330 / 120;
   }
   /* 
@@ -703,7 +709,7 @@ img {
     flex-basis: 190px;
   }
   .big-card {
-    width: 335px;
+    width: 100%;
     margin: auto;
   }
   .small-card-list {
@@ -712,10 +718,13 @@ img {
     margin: auto;
   }
   .small-card-list article {
-    width: 335px;
+    width: 100%;
   }
   .activity-item img {
     aspect-ratio: 334 / 190;
+  }
+  .activity-item h3 {
+    font-size: clamp(0.8rem, 0.4471rem + 1.5686vw, 1.2rem);
   }
   /* 
   ###############################################
@@ -731,21 +740,6 @@ img {
   }
   #footer li {
     margin-left: 0;
-  }
-  .parent {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .child a {
-    display: flex;
-    border: 1px solid #000;
-    width: 80%;
-  }
-  .img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
   }
 }
 /* 
