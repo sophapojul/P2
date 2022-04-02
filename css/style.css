@@ -732,21 +732,6 @@ img {
   #footer li {
     margin-left: 0;
   }
-  .parent {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .child a {
-    display: flex;
-    border: 1px solid #000;
-    width: 80%;
-  }
-  .img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 /* 
 #################################################
