@@ -162,26 +162,26 @@ img {
 /* End Search Form */
 /* 
 #################################################
-# Filtres
+# filters
 #################################################
 */
-#filtres {
+#filters {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
   margin: 35px 0;
 }
-#filtres h3 {
+#filters h3 {
   margin-right: 10px;
   text-transform: capitalize;
 }
-#filtre-list {
+#filter-list {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
-.filtre-item {
+.filter-item {
   display: flex;
   align-items: center;
   gap: 13px;
@@ -194,33 +194,33 @@ img {
   transition: all 0.5s;
   cursor: pointer;
 }
-#filtres .fa-stack {
+#filters .fa-stack {
   font-size: 24px;
   margin-left: -8px;
   margin-top: -4px;
 }
-#filtres .fa-stack-1x::before {
+#filters .fa-stack-1x::before {
   font-size: 19px; /* icon height */
 }
-#filtres .fa-circle {
+#filters .fa-circle {
   font-size: 51px;
 }
-#filtres .fas::before {
+#filters .fas::before {
   color: var(--blue);
 }
-#filtres .fa-circle:before {
+#filters .fa-circle:before {
   color: var(--blue-light);
 }
-.filtre-text {
+.filter-text {
   width: max-content;
 }
-/* End Filtres */
+/* End filters */
 /* 
 #################################################
-# Animation Filtres
+# Animation filters
 #################################################
 */
-#filtres .filtre-item::after {
+#filters .filter-item::after {
   content: ">>";
   position: absolute;
   opacity: 0;
@@ -228,16 +228,16 @@ img {
   right: -20px;
   transition: all 0.5s;
 }
-#filtres .filtre-item:hover {
+#filters .filter-item:hover {
   padding-right: 35px;
   border: var(--border-2-blue);
 }
-#filtres .filtre-item:hover::after {
+#filters .filter-item:hover::after {
   opacity: 1;
   right: 10px;
   color: var(--blue);
 }
-/* End Animation Filtres */
+/* End Animation filters */
 /* 
 #################################################
 # Info
