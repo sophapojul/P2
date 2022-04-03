@@ -470,12 +470,13 @@ img {
   margin-top: -60px;
 }
 .activity-list h3 span {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   z-index: 1;
   width: 100%;
   padding: 0 19px;
   font-weight: 700;
-  line-height: 56px;
+  height: 56px;
   background: white;
   border-radius: 0 0 14px 14px;
 }
