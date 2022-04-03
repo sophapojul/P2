@@ -443,7 +443,6 @@ img {
   gap: 43px;
   width: calc(50% - (43px / 2));
   height: 444.5px;
-  min-width: 244px;
 }
 .big-card img {
   height: 100%;
