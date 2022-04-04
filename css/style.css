@@ -22,7 +22,7 @@ p {
   --blue: #0065fc;
   --blue-light: #deebff;
   --grey: #f2f2f2;
-  --body-content: 1390px;
+  --body-content: 1340px;
   --border-1-grey: 1px solid var(--grey);
   --border-2-grey: 2px solid var(--grey);
   --border-1-blue: 1px solid var(--blue);
@@ -138,21 +138,16 @@ img {
 #form input:focus {
   outline: none;
 }
-.desktop-search {
+.btn-search {
   flex: 0 0 134px;
   margin-left: -50px;
+  font-weight: bold;
   background-color: var(--blue);
   color: #fff;
   border: var(--border-1-blue);
   border-radius: 0 15px 15px 0;
 }
 .mobile-search {
-  flex: 0 0 50px;
-  margin-left: -50px;
-  background-color: var(--blue);
-  color: #fff;
-  border: var(--border-1-blue);
-  border-radius: 15px;
   display: none;
 }
 .fa-search {
@@ -290,17 +285,20 @@ img {
   flex-basis: calc(var(--body-content) * 2 / 3 - (40px / 2));
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1vw;
   background-color: var(--grey);
-  padding: 2.5%;
+  padding: 2.4%;
   border-radius: 20px;
 }
 .location-list {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 30px;
-  padding: 0 5px;
+  gap: 1vw;
+  padding: 0;
+}
+.location-item {
+  flex-basis: 245px;
 }
 .location-item > a {
   display: flex;
@@ -354,7 +352,7 @@ img {
   flex-direction: column;
   gap: 25px;
   background-color: var(--grey);
-  padding: 3%;
+  padding: 2.4%;
   border-radius: 20px;
 }
 #popular-title {
@@ -614,6 +612,14 @@ img {
   .mobile-search {
     display: inline-block;
   }
+  .btn-search {
+    flex: 0 0 50px;
+    margin-left: -50px;
+    background-color: var(--blue);
+    color: #fff;
+    border: var(--border-1-blue);
+    border-radius: 15px;
+  }
   /* 
   ###############################################
   # Hosting < 768
@@ -765,5 +771,8 @@ img {
   .big-card,
   .small-card-list article {
     width: 100%;
+  }
+  #form input {
+    font-size: clamp(0.75rem, 0.2203rem + 3.3898vw, 1rem);
   }
 }
