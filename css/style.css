@@ -678,7 +678,7 @@ img {
     width: 100%;
   }
   .location-body,
-  .location-body h3 {
+  .location-item h3 {
     font-size: clamp(0.8rem, 0.4471rem + 1.5686vw, 1.2rem);
   }
   .location-item img {
